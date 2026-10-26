@@ -60,7 +60,9 @@ Niveau n atteint à 100 × n^1,4 XP cumulés. Un test vérifie que connexion et 
 
 ## Lancer l'app
 
-Expo SDK 56. La première fois :
+Expo SDK 58 (la seule version acceptée par Expo Go aujourd'hui). Il faut **Node 22.18 ou plus récent** (Node 24 LTS conseillé) : Expo 58 refuse Node 20.
+
+La première fois :
 
 ```bash
 npm run setup     # installe Expo puis les modules natifs aux versions compatibles avec le SDK

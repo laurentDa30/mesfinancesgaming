@@ -8,7 +8,7 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "setup": "npm install && npx expo install expo-router expo-sqlite expo-crypto expo-status-bar expo-linking expo-constants expo-system-ui react react-native react-native-safe-area-context react-native-screens react-native-svg && npx expo install --dev @types/react typescript && npx expo install --fix",
+    "setup": "npm install && npx expo install expo-router expo-sqlite expo-crypto expo-status-bar expo-linking expo-constants expo-system-ui react react-dom react-native react-native-safe-area-context react-native-screens react-native-svg react-native-reanimated react-native-worklets && npx expo install --dev @types/react typescript && npx expo install --fix",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -17,7 +17,7 @@
     "typecheck:logic": "tsc -p tsconfig.logic.json"
   },
   "dependencies": {
-    "expo": "^56.0.0"
+    "expo": "^58.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0"
