@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Mes Finances Gaming",
+    "slug": "mesfinancesgaming",
+    "scheme": "mesfinancesgaming",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0E1A",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.laurentda30.mesfinancesgaming"
+    },
+    "android": {
+      "package": "com.laurentda30.mesfinancesgaming"
+    },
+    "plugins": ["expo-router", "expo-sqlite"]
+  }
+}

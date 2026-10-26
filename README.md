@@ -58,25 +58,41 @@ Les données circulent dans un seul sens : finances → santé et Glitchs → é
 
 Niveau n atteint à 100 × n^1,4 XP cumulés. Un test vérifie que connexion et Ravitaillement restent sous un tiers de l'XP d'un mois actif.
 
+## Lancer l'app
+
+Expo SDK 56. La première fois :
+
+```bash
+npm run setup     # installe Expo puis les modules natifs aux versions compatibles avec le SDK
+npx expo start    # scanne le QR code avec Expo Go sur ton téléphone
+```
+
+`npm run setup` utilise `npx expo install`, qui choisit lui-même les versions compatibles : aucune version de module natif n'est figée à la main dans `package.json`.
+
 ## Lancer les tests
 
 Node 22.18 ou plus récent exécute le TypeScript directement, sans installation :
 
 ```bash
-npm test
+npm test                 # moteur + logique de l'app
+npm run typecheck:logic  # types du moteur et de la logique, sans installation
+npm run typecheck        # types de tout le projet, après npm run setup
 ```
 
-Pour la vérification de types :
+## Structure
 
-```bash
-npm install
-npm run typecheck
-```
+| Dossier | Rôle |
+| --- | --- |
+| `src/engine` | Règles financières, santé, Glitchs, XP. TypeScript pur, aucune dépendance. |
+| `src/logic` | Logique de l'app sans interface : saisie des montants, brouillons, état et actions (réducteur), vues par mois. Testée. |
+| `src/data` | Stockage SQLite local (`storage.ts`) et contexte React (`AppStore.tsx`). |
+| `src/ui` | Thème Nexa et composants de base (carte, pavé numérique, jauge…). |
+| `app` | Écrans (expo-router) : démarrage, accueil, budget, récurrents, coffre, saisie. |
 
 ## Lots de développement
 
 1. ✅ Moteur de règles et tests (`src/engine`), sans interface.
-2. Saisie et écrans financiers (app Expo).
+2. ✅ Saisie en 3 tapes et écrans financiers (app Expo), stockage local. *Écrit et testé hors appareil : premier lancement réel à faire.*
 3. Accueil, jauge, XP.
 4. Glitchs et Modules (arbre de compétences).
 5. Avatar + QG, mode simulation, projection adulte.

@@ -1,18 +1,25 @@
 {
   "name": "mesfinancesgaming",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Mes Finances Gaming — app mobile de gestion budgétaire gamifiée (univers Nexa). Lot 1 : moteur de règles.",
-  "type": "module",
+  "description": "Mes Finances Gaming — app mobile de gestion budgétaire gamifiée (univers Nexa).",
+  "main": "expo-router/entry",
   "engines": {
     "node": ">=22.18"
   },
   "scripts": {
+    "setup": "npm install && npx expo install expo-router expo-sqlite expo-crypto expo-status-bar expo-linking expo-constants expo-system-ui react react-native react-native-safe-area-context react-native-screens react-native-svg && npx expo install --dev @types/react typescript && npx expo install --fix",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
     "test": "node --test \"src/**/*.test.ts\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "typecheck:logic": "tsc -p tsconfig.logic.json"
+  },
+  "dependencies": {
+    "expo": "^56.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "typescript": "^5.8.0"
+    "@types/node": "^22.0.0"
   }
 }
