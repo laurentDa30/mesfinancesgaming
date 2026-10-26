@@ -1,0 +1,18 @@
+{
+  "name": "mesfinancesgaming",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mes Finances Gaming — app mobile de gestion budgétaire gamifiée (univers Nexa). Lot 1 : moteur de règles.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}
